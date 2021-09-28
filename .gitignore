@@ -1,4 +1,3 @@
-# Binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
@@ -14,3 +13,8 @@
 # Dependency directories (remove the comment below to include it)
 vendor/
 tmp/
+.idea
+.terraform.*
+firebase-debug.log
+.terraform
+*.iml
