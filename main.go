@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"os"
 	"strconv"
-	"takeoff-projects/olenap/go-api/app.go"
-	"takeoff-projects/olenap/go-api/data/bmodel.go"
+	"takeoff-projects/olenap/core/pets"
+	"takeoff-projects/olenap/petsweb"
 	"time"
 )
 

@@ -7,9 +7,12 @@ gcloud components install app-engine-go &&
 
 gsutil mb gs://olenap-level1
 
+swag init --g api/pets/api.go -o ./docs
+
+gcloud builds submit .
 
 cd terraform
 terraform init  -backend-config="bucket=olenap-level1"  &&
 terraform apply -auto-approve &&
 cd ..
-gcloud app create -q
+gcloud app create
