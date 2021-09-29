@@ -2,25 +2,24 @@ package petsdb
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"os"
 	"time"
 
-	"cloud.google.com/go/datastore"
+	"cloud.google.com/go/firestore"
 )
 
 var projectID string
 
 // Pet model stored in Datastore
 type Pet struct {
-	Added   time.Time `datastore:"added"`
-	Caption string    `datastore:"caption"`
-	Email   string    `datastore:"email"`
-	Image   string    `datastore:"image"`
-	Likes   int       `datastore:"likes"`
-	Owner   string    `datastore:"owner"`
-	Petname string    `datastore:"petname"`
+	Added   time.Time `firestore:"added" json:"added"`
+	Caption string    `firestore:"caption" json:"caption"`
+	Email   string    `firestore:"email" json:"email"`
+	Image   string    `firestore:"image" json:"image"`
+	Likes   int       `firestore:"likes" json:"likes"`
+	Owner   string    `firestore:"owner" json:"owner"`
+	Petname string    `firestore:"petname" json:"petname"`
 	Name    string    // The ID used in the datastore.
 }
 

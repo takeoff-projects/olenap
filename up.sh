@@ -12,4 +12,4 @@ cd terraform
 terraform init  -backend-config="bucket=olenap-level1"  &&
 terraform apply -auto-approve &&
 cd ..
-gcloud app deploy -q
+gcloud app create -q

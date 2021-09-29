@@ -39,9 +39,3 @@ resource "google_project_service" "gcp_services" {
   service            = each.key
   disable_on_destroy = false
 }
-
-resource "google_app_engine_application" "app" {
-  project       = var.project_id
-  location_id   = "us-central"
-  database_type = "CLOUD_FIRESTORE"
-}
